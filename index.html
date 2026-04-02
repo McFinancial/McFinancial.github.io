@@ -30,9 +30,9 @@
   .reveal.visible { opacity:1; transform:translateY(0); }
 
   /* NAV */
-  nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:1.4rem 4rem; background:rgba(248,245,238,0.94); backdrop-filter:blur(16px); border-bottom:0.5px solid var(--border); transition:padding 0.3s, box-shadow 0.3s; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:1.2rem 4rem; background:rgba(248,245,238,0.94); backdrop-filter:blur(16px); border-bottom:0.5px solid var(--border); transition:padding 0.3s, box-shadow 0.3s; }
   nav.scrolled { padding:1rem 4rem; box-shadow:0 2px 30px rgba(0,0,0,0.06); }
-  .nav-logo { font-family:var(--font-display); font-size:1.1rem; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--dark); text-decoration:none; }
+  .nav-logo { font-family:var(--font-display); font-size:1.5rem; font-weight:400; letter-spacing:0.15em; text-transform:uppercase; color:var(--dark); text-decoration:none; }
   .nav-links { display:flex; gap:2.5rem; list-style:none; }
   .nav-links a { font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color 0.2s; position:relative; }
   .nav-links a::after { content:""; position:absolute; bottom:-3px; left:0; right:0; height:0.5px; background:var(--gold); transform:scaleX(0); transition:transform 0.25s; transform-origin:left; }
@@ -44,11 +44,11 @@
   .nav-mobile-toggle span { display:block; width:22px; height:1px; background:var(--dark); }
 
   /* HERO */
-  .hero { min-height:100vh; display:grid; grid-template-columns:55% 45%; padding-top:5rem; }
+  .hero { min-height:100vh; display:grid; grid-template-columns:52% 48%; padding-top:5rem; }
   .hero-left { display:flex; flex-direction:column; justify-content:center; padding:7rem 5rem 7rem 4rem; }
   .hero-label { font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5rem; display:flex; align-items:center; gap:1rem; }
   .hero-label-line { display:block; height:0.5px; background:var(--gold); animation:lineGrow 0.6s 0.2s ease forwards; width:0; }
-  .hero-headline { font-family:var(--font-display); font-size:clamp(3.2rem,5.5vw,5rem); font-weight:300; line-height:1.05; color:var(--dark); margin-bottom:2rem; }
+  .hero-headline { font-family:var(--font-display); font-size:clamp(3.5rem,6vw,6rem); font-weight:300; line-height:1.02; color:var(--dark); margin-bottom:2rem; }
   .hero-headline em { font-style:italic; color:var(--gold); }
   .hero-subtext { font-size:1rem; font-weight:300; color:var(--muted); max-width:440px; line-height:1.85; margin-bottom:3.5rem; }
   .hero-subtext strong { color:var(--dark); font-weight:400; }
@@ -59,7 +59,7 @@
   .btn-secondary:hover { color:var(--gold); border-color:var(--gold); }
   .hero-right { position:relative; background:var(--dark); display:flex; flex-direction:column; justify-content:flex-end; padding:4rem 3.5rem; overflow:hidden; }
   .hero-bg-text { position:absolute; top:-3rem; left:-2rem; font-family:var(--font-display); font-size:20rem; font-weight:300; color:rgba(255,255,255,0.025); line-height:1; pointer-events:none; user-select:none; }
-  .hero-photo-area { width:100%; aspect-ratio:3/4; max-height:440px; position:relative; z-index:1; overflow:hidden; }
+  .hero-photo-area { width:88%; aspect-ratio:3/4; max-height:400px; position:relative; z-index:1; overflow:hidden; margin:0 auto; border:4px solid var(--cream); outline:1px solid rgba(184,150,90,0.2); }
   .hero-photo-area img { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
   .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; position:relative; z-index:1; border-top:0.5px solid rgba(255,255,255,0.07); padding-top:2rem; margin-top:2rem; }
   .stat-num { font-family:var(--font-display); font-size:2.8rem; font-weight:300; color:var(--gold); display:block; line-height:1; }
@@ -222,12 +222,13 @@
     .hero { grid-template-columns:1fr; min-height:auto; }
     .hero-left { padding:6rem 1.5rem 3rem; }
     .hero-right { padding:2rem 1.5rem 3rem; min-height:auto; }
-    .hero-photo-area { max-height:300px; }
+    .hero-photo-area { max-height:420px; aspect-ratio:auto; height:420px; }
+    .hero-photo-area img { object-position:top center; object-fit:cover; width:100%; height:100%; }
     .strip { padding:1.2rem 1.5rem; gap:1.5rem; }
     .section { padding:5rem 1.5rem; }
     .phil-grid, .who-grid, .vert-header, .proc-header, .cta-inner { grid-template-columns:1fr; gap:2rem; }
     .phil-left { position:static; }
-    .who-image-area { aspect-ratio:3/2; }
+    .who-image-area { aspect-ratio:auto; height:380px; } .who-image-area img { object-position:top center; }
     .vert-grid, .proc-steps, .learn-grid, .social-cards { grid-template-columns:1fr; }
     .proc-step { border-right:none; border-bottom:0.5px solid var(--border); }
     .social-grid { grid-template-columns:1fr; gap:3rem; }
@@ -261,6 +262,7 @@
 
 <section class="hero" id="inicio">
   <div class="hero-left">
+    <div style="font-family:var(--font-display); font-size:5rem; font-weight:300; color:rgba(184,150,90,0.12); line-height:1; margin-bottom:-1rem; letter-spacing:0.05em;" class="anim-1">MC</div>
     <div class="hero-label anim-1"><span class="hero-label-line"></span>Estratega de inversión binacional</div>
     <h1 class="hero-headline anim-2">Bienvenido a<br>mi <em>espacio</em></h1>
     <p class="hero-subtext anim-3">Aquí te comparto algunas de mis mejores inversiones y también lo que hago. Me muevo entre México y Canadá — <strong>creando puentes de inversión</strong> que conectan dos mercados con una misma visión de claridad.</p>
