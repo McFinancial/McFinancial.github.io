@@ -32,7 +32,7 @@
   /* NAV */
   nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:1.2rem 4rem; background:rgba(248,245,238,0.94); backdrop-filter:blur(16px); border-bottom:0.5px solid var(--border); transition:padding 0.3s, box-shadow 0.3s; }
   nav.scrolled { padding:1rem 4rem; box-shadow:0 2px 30px rgba(0,0,0,0.06); }
-  .nav-logo { font-family:var(--font-display); font-size:1.5rem; font-weight:400; letter-spacing:0.15em; text-transform:uppercase; color:var(--dark); text-decoration:none; }
+  .nav-logo { font-family:var(--font-display); font-size:1.4rem; font-weight:400; letter-spacing:0.08em; text-transform:none; color:var(--dark); text-decoration:none; } .nav-logo strong { font-weight:500; font-size:1.6rem; }
   .nav-links { display:flex; gap:2.5rem; list-style:none; }
   .nav-links a { font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color 0.2s; position:relative; }
   .nav-links a::after { content:""; position:absolute; bottom:-3px; left:0; right:0; height:0.5px; background:var(--gold); transform:scaleX(0); transition:transform 0.25s; transform-origin:left; }
@@ -59,7 +59,7 @@
   .btn-secondary:hover { color:var(--gold); border-color:var(--gold); }
   .hero-right { position:relative; background:var(--dark); display:flex; flex-direction:column; justify-content:flex-end; padding:4rem 3.5rem; overflow:hidden; }
   .hero-bg-text { position:absolute; top:-3rem; left:-2rem; font-family:var(--font-display); font-size:20rem; font-weight:300; color:rgba(255,255,255,0.025); line-height:1; pointer-events:none; user-select:none; }
-  .hero-photo-area { width:88%; aspect-ratio:3/4; max-height:400px; position:relative; z-index:1; overflow:hidden; margin:0 auto; border:4px solid var(--cream); outline:1px solid rgba(184,150,90,0.2); }
+  .hero-photo-area { width:100%; aspect-ratio:3/4; max-height:480px; position:relative; z-index:1; overflow:hidden; }
   .hero-photo-area img { width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
   .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; position:relative; z-index:1; border-top:0.5px solid rgba(255,255,255,0.07); padding-top:2rem; margin-top:2rem; }
   .stat-num { font-family:var(--font-display); font-size:2.8rem; font-weight:300; color:var(--gold); display:block; line-height:1; }
@@ -246,7 +246,7 @@
 <body>
 
 <nav id="main-nav">
-  <a href="#inicio" class="nav-logo">MC Hernandez</a>
+  <a href="#inicio" class="nav-logo"><strong>M</strong>ari<strong>C</strong>armen <span style="text-transform:uppercase; letter-spacing:0.15em;">Hernandez</span></a>
   <ul class="nav-links">
     <li><a href="#enfoque">Mi enfoque</a></li>
     <li><a href="#quien">Trayectoria</a></li>
@@ -262,7 +262,7 @@
 
 <section class="hero" id="inicio">
   <div class="hero-left">
-    <div style="font-family:var(--font-display); font-size:5rem; font-weight:300; color:rgba(184,150,90,0.12); line-height:1; margin-bottom:-1rem; letter-spacing:0.05em;" class="anim-1">MC</div>
+    <div style="font-family:var(--font-display); font-size:6rem; font-weight:300; color:rgba(184,150,90,0.1); line-height:1; margin-bottom:-1.5rem; letter-spacing:0.2em;" class="anim-1">MC</div>
     <div class="hero-label anim-1"><span class="hero-label-line"></span>Estratega de inversión binacional</div>
     <h1 class="hero-headline anim-2">Bienvenido a<br>mi <em>espacio</em></h1>
     <p class="hero-subtext anim-3">Aquí te comparto algunas de mis mejores inversiones y también lo que hago. Me muevo entre México y Canadá — <strong>creando puentes de inversión</strong> que conectan dos mercados con una misma visión de claridad.</p>
@@ -278,7 +278,7 @@
     </div>
     <div class="hero-stats">
       <div><span class="stat-num">15+</span><span class="stat-label">Años en gestión, finanzas e inversiones</span></div>
-      <div><span class="stat-num">♡ ✈</span><span class="stat-label">Alma viajera</span></div>
+      <div><span class="stat-num" style="font-family:var(--font-display); font-size:1.6rem; font-style:italic; letter-spacing:0.05em; line-height:1.4;">Viajera<br>de corazón</span><span class="stat-label">Alma viajera</span></div>
       <div><span class="stat-num" style="font-size:1.5rem; line-height:1.3;">México<br>· Canadá</span><span class="stat-label">Dos mercados, una visión</span></div>
     </div>
   </div>
@@ -350,7 +350,7 @@
       <div class="vc-num">01 — Inmobiliario</div>
       <div class="vc-title">Inversiones en México para canadienses</div>
       <p class="vc-desc">Acompañamiento integral para inversionistas en Québec y Canadá que quieren acceder al mercado inmobiliario mexicano — con estructura legal, fiscal y logística diseñada para no residentes.</p>
-      <div class="vc-tags"><a href="https://www.mylandinmexico.com" target="_blank" class="vc-tag" style="text-decoration:none; cursor:pointer;">My Land in Mexico ↗</a><span class="vc-tag">Due diligence</span><span class="vc-tag">Viajes de prospección</span></div>
+      <div class="vc-tags"><a href="https://www.mylandinmexico.com" target="_blank" class="vc-tag" style="text-decoration:none; cursor:pointer;">My Land in Mexico ↗</a><a href="https://www.instagram.com/voyage.au.paradis/" target="_blank" class="vc-tag" style="text-decoration:none; cursor:pointer;">Viajes de prospección ↗</a></div>
     </div>
     <div class="vert-card reveal">
       <div class="vc-num">02 — Privado</div>
@@ -402,7 +402,7 @@
         <li>Cómo construir un portafolio paso a paso</li>
         <li>Sesiones en grupo · Formato práctico e interactivo</li>
       </ul>
-      <a href="https://calendar.app.google/THz7xHAJTq65Tsfd8" target="_blank" style="display:inline-block; margin-top:2rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); border-bottom:0.5px solid var(--gold); padding-bottom:3px; text-decoration:none;">Quiero unirme →</a>
+      
     </div>
     <div class="learn-card reveal">
       <div class="lc-label">Neuroplasticidad</div>
@@ -412,9 +412,9 @@
         <li>Activación de neuroplasticidad con ejercicios prácticos</li>
         <li>Eliminar bloqueos mentales ante el dinero y el riesgo</li>
         <li>Desarrollar foco, claridad y pensamiento estratégico</li>
-        <li>Clases grupales · Certificación en proceso</li>
+        
       </ul>
-      <a href="https://calendar.app.google/THz7xHAJTq65Tsfd8" target="_blank" style="display:inline-block; margin-top:2rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); border-bottom:0.5px solid var(--gold); padding-bottom:3px; text-decoration:none;">Quiero unirme →</a>
+      
     </div>
   </div>
 </section>
@@ -459,7 +459,7 @@
 <footer>
   <div class="footer-top">
     <div>
-      <a href="#inicio" class="footer-logo">MC Hernandez</a>
+      <a href="#inicio" class="footer-logo"><strong style="font-weight:500;">M</strong>ari<strong style="font-weight:500;">C</strong>armen <span style="letter-spacing:0.15em;">HERNANDEZ</span></a>
       <p class="footer-tagline">Estratega de inversión binacional.<br>Claridad entre Canadá y México.</p>
     </div>
     <div class="footer-col">
